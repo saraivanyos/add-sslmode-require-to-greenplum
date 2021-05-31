@@ -2,7 +2,7 @@
 
 ## Installation
 
-Tool can be installed with pip install -e 'donwload location'
+Tool can be installed with pip install -e 'download location'
 
 ## Running the tool
 
