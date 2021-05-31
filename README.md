@@ -16,10 +16,10 @@ site_id, token_name and personal_access_token can be specified in config.ini
 
 ### validate_datasources function
 
-validates sslmode status and outputs excel file. 
+validates sslmode status and outputs excel file
 
 ### update_datasources function
 
-both validates and updates sslmode where applicable. 
+both validates and updates sslmode where applicable
 
 
