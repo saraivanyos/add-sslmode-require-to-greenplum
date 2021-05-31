@@ -4,10 +4,8 @@ import xml.etree.ElementTree as ET
 import xml.sax.saxutils as sax
 from uuid import uuid4
 
-from tableaudocumentapi import Connection, xfile
-from tableaudocumentapi import Field
-from tableaudocumentapi.multilookup_dict import MultiLookupDict
-from tableaudocumentapi.xfile import xml_open
+from addsslmoderequiretogreenplum import Connection, xfile
+from addsslmoderequiretogreenplum.xfile import xml_open
 
 ########
 # This is needed in order to determine if something is a string or not.  It is necessary because
@@ -32,32 +30,6 @@ def _get_metadata_xml_for_field(root_xml, field_name):
 def _is_used_by_worksheet(names, field):
     return any(y for y in names if y in field.worksheets)
 
-
-class FieldDictionary(MultiLookupDict):
-
-    def used_by_sheet(self, name):
-        # If we pass in a string, no need to get complicated, just check to see if name is in
-        # the field's list of worksheets
-        if isinstance(name, basestring):
-            return [x for x in self.values() if name in x.worksheets]
-
-        # if we pass in a list, we need to check to see if any of the names in the list are in
-        # the field's list of worksheets
-        return [x for x in self.values() if _is_used_by_worksheet(name, x)]
-
-
-def _column_object_from_column_xml(root_xml, column_xml):
-    field_object = Field.from_column_xml(column_xml)
-    local_name = field_object.id
-    metadata_record = _get_metadata_xml_for_field(root_xml, local_name)
-    if metadata_record is not None:
-        field_object.apply_metadata(metadata_record)
-    return _ColumnObjectReturnTuple(field_object.id, field_object)
-
-
-def _column_object_from_metadata_xml(metadata_xml):
-    field_object = Field.from_metadata_xml(metadata_xml)
-    return _ColumnObjectReturnTuple(field_object.id, field_object)
 
 
 def base36encode(number):

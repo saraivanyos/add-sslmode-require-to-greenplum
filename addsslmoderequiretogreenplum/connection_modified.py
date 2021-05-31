@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-from tableaudocumentapi.dbclass import is_valid_dbclass
+from addsslmoderequiretogreenplum.dbclass import is_valid_dbclass
 
 
 class Connection(object):
