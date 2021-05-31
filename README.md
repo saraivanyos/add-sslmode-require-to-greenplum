@@ -1,1 +1,1 @@
-# enable_ssl_greenplum_datasources
+# add-sslmode-require-to-greenplum
