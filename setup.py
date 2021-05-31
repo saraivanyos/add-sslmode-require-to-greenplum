@@ -11,10 +11,10 @@ setup(
     url='https://github.com/saraivanyos/add-sslmode-require-to-greenplum',
     packages=['addsslmoderequiretogreenplum'],
     license='MIT',
-    description='A Python module for adding sslmode require to Tableau Greenplum data sources.'
+    description='A Python module for adding sslmode require to Tableau Greenplum data sources.',
     install_requires=[
-        'tableauserverclient',
-        'pandas',
-        'numpy',
+        'tableauserverclient==0.15.0',
+        'pandas', 
+        'openpyxl'
     ]
 )
