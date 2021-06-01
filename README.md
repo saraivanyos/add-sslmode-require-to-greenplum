@@ -20,8 +20,8 @@ validates sslmode status and outputs excel file
 
 ### update_datasources function
 
-both validates and updates sslmode where applicable
-Credentials should be provided in excel for republishing
+both validates and updates sslmode where applicable, 
+credentials should be provided in excel for republishing
 
 
 ## Warning
