@@ -21,5 +21,11 @@ validates sslmode status and outputs excel file
 ### update_datasources function
 
 both validates and updates sslmode where applicable
+Credentials should be provided in excel for republishing
+
+
+## Warning
+
+Tool only works with data source names without special characters
 
 
