@@ -20,9 +20,11 @@ class Connection(object):
         self._port = connxml.get('port', None)
         self._query_band = connxml.get('query-band-spec', None)
         self._initial_sql = connxml.get('one-time-sql', None)
+        #added this line
         self._sslmode = connxml.get('sslmode', None)
 
     def __repr__(self):
+        #edited this
         return "'<Connection server='{}' dbname='{}' class='{}' sslmode='{}' @ {}>'".format(self._server, self._dbname, self._class, self._sslmode, hex(id(self)))
 
     @classmethod
@@ -209,6 +211,7 @@ class Connection(object):
         else:
             self._connectionXML.set('one-time-sql', value)
 
+    #added below lines       
     @property
     def sslmode(self):
         """SSLmode."""
