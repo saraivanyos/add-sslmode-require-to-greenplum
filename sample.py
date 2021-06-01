@@ -2,8 +2,6 @@ from addsslmoderequiretogreenplum import AddSsl as asr
 
 import os
 
-change working directory to C:\Sari\min\hachathon\workingdir
-
 os.chdir('C:\\workingdir')
 
 
