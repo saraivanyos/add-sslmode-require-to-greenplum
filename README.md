@@ -29,3 +29,10 @@ credentials should be provided in excel for republishing
 Tool only works with data source names without special characters
 
 
+## Build by modifying modules of
+
+https://github.com/tableau/document-api-python
+
+
+
+
